@@ -27,13 +27,15 @@ if (mediaqueryMin.matches) {
   // Nav scroll
   let prevScrollpos = window.pageYOffset;
   window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      nav.style.height = "100%";
-    } else {
-      nav.style.height = "0%";
+    if (!navStatus) {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        nav.style.height = "100%";
+      } else {
+        nav.style.height = "0%";
+      }
+      prevScrollpos = currentScrollPos;
     }
-    prevScrollpos = currentScrollPos;
   };
 
   // Footer
@@ -58,7 +60,7 @@ if (mediaqueryMax.matches) {
     navTrigger.classList.toggle("active");
     if (navStatus == false) {
       nav.style.width = "100%";
-      nav.style.height = "444px";
+      nav.style.height = "450px";
       navStatus = true;
     } else {
       nav.style.width = "80px";

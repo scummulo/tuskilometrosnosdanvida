@@ -11,6 +11,11 @@ footer {
     background-color: $color-tertiary;
     text-align: center;
 
+    @media (max-width: 992px) {
+      height: auto;
+      padding: 60px 15px;
+    }
+
     .footer__up--text {
       h2 {
         font-family: "Dimbo";
@@ -19,6 +24,10 @@ footer {
         margin: 0 0 30px 0;
         color: #fff;
         text-transform: uppercase;
+
+        @media (max-width: 992px) {
+          font-size: 40px;
+        }
       }
 
       p {
@@ -27,7 +36,9 @@ footer {
       }
 
       button {
+        background-color: #fff;
         margin-top: 30px;
+
         a {
           color: $color-tertiary;
         }
@@ -39,15 +50,24 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    flex-wrap: wrap;
     height: 80px;
     background-color: #333;
     color: #fff;
+
+    @media (max-width: 992px) {
+      height: auto;
+      padding: 30px 15px;
+    }
 
     ul {
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @media (max-width: 992px) {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
 
       li {
         margin-right: 30px;
