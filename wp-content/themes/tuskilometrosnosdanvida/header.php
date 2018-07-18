@@ -20,39 +20,30 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'tuskilometrosnosdanvida' ); ?></a>
-
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$tuskilometrosnosdanvida_description = get_bloginfo( 'description', 'display' );
-			if ( $tuskilometrosnosdanvida_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $tuskilometrosnosdanvida_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'tuskilometrosnosdanvida' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+<body id="body"<?php body_class(); ?>>
+		<header>
+			<a  id="logo" href="<?php echo home_url(); ?>">
+				<img src="<?php bloginfo('template_url'); ?>/dist/assets/img/logo.png" alt="tuskilometrosnosdanvida-logo">
+			</a>
+			<div class="menu__wrapper">
+				<div id="nav-trigger">
+					<i></i><i></i><i></i>
+					<span>Menu</span>
+				</div>
+				<nav id="navbar">
+					<div class="menu__wrapper--inner">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'nav',
+							'container'      => 'ul'
+						) );
+						?>
+					</div>
+				</nav>
+			</div>
+			<img class="sehop" src="<?php bloginfo('template_url'); ?>/dist/assets/img/sehop.jpg" alt="sehop">
+			<div class="submit">
+				<button class="secondary"><a href="#">Inscríbete</a></button>
+			</div>
+		</header>
+	<main>

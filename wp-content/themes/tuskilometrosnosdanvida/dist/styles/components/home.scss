@@ -1,0 +1,126 @@
+// Home
+// Hero
+.hero {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-content: center;
+  flex-flow: column;
+  padding: 30px 30px 30px 100px;
+  // background-image: url("./dist/assets/img/tuskilometrosnosdanvida_bg.jpg");
+  // background-size: cover;
+
+  @media (max-width: 992px) {
+    padding: 60px 15px;
+    height: calc(100vh - 100px);
+    justify-content: flex-start;
+  }
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   background: #fff314;
+  //   background: -moz-linear-gradient(-45deg, #8fc5ac 0%, #fff314 100%);
+  //   background: -webkit-linear-gradient(-45deg, #8fc5ac 0%, #fff314 100%);
+  //   background: linear-gradient(135deg, #8fc5ac 0%, #fff314 100%);
+  //   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff314', endColorstr='#8fc5ac',GradientType=1 );
+  //   opacity: 0.8;
+  // }
+
+  .hero__title {
+    position: relative;
+    z-index: 9;
+    max-width: 700px;
+    margin-top: -100px;
+
+    @media (max-width: 1200px) {
+      max-width: 500px;
+    }
+
+    @media (max-width: 992px) {
+      max-width: none;
+      margin-top: 0;
+    }
+
+    h1 {
+      font-family: "Dimbo";
+      font-size: 120px;
+      font-weight: 300;
+      color: #fff;
+      margin: 15px 0;
+      line-height: 0.8;
+      letter-spacing: 2px;
+
+      @media (max-width: 1200px) {
+        font-size: 80px;
+      }
+
+      @media (max-width: 992px) {
+        font-size: 60px;
+      }
+
+      @media (max-width: 350px) {
+        font-size: 40px;
+      }
+    }
+
+    > span {
+      display: block;
+      font-size: 30px;
+      color: #fff;
+
+      @media (max-width: 1200px) {
+        font-size: 30px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
+
+      @media (max-width: 350px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .hero__sponsors {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 2;
+    max-width: 900px;
+    transform: translateX(-50%);
+
+    .swiper-container {
+      padding: 0 15px;
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        display: none!important;
+        background-image: none;
+        width: 10px;
+        height: 10px;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        margin-top: -10px;
+      }
+
+      .swiper-button-next {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+      }
+
+      .swiper-button-prev {
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+      }
+    }
+  }
+}

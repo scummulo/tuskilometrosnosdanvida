@@ -1,0 +1,28 @@
+// Organization
+.organization {
+  .team {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    img {
+      margin: 0;
+      border-radius: 50%;
+      width: 50%;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin: 15px;
+      color: #333;
+      white-space: nowrap;
+    }
+
+    p {
+      text-align: center;
+      margin: 0;
+    }
+  }
+}

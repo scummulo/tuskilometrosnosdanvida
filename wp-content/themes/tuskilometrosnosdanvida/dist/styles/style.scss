@@ -1,11 +1,11 @@
 /*!
-Theme Name: GPIC
+Theme Name: tuskilometrosnosdanvida
 Author: juan.jimenez
 Author URI: https://github.com/scummulo
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: gpic
+Text Domain: tuskilometrosnosdanvida
 Tags:
 */
 
@@ -20,18 +20,23 @@ Tags:
 
 /* Elements */
 @import "elements/forms";
-@import "elements/sections";
 @import "elements/buttons";
 
 /* Objects */
 @import "objects/grid";
 @import "objects/transitions";
 @import "objects/slider";
+@import "objects/swiper";
 
 /* Components */
 @import "components/header";
+@import "components/main";
 @import "components/footer";
 @import "components/home";
-@import "components/page-template";
+@import "components/sponsors";
+@import "components/race";
+@import "components/charity-project";
+@import "components/organization";
+@import "components/page";
 
 /* Trumps */

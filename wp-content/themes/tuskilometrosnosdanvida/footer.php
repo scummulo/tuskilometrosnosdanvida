@@ -11,26 +11,49 @@
 
 ?>
 
-	</div><!-- #content -->
+	</main><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'tuskilometrosnosdanvida' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'tuskilometrosnosdanvida' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'tuskilometrosnosdanvida' ), 'tuskilometrosnosdanvida', '<a href="http://underscores.me/">juan.jimenez</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer id="footer">
+	<div class="footer__up">
+		<div class="footer__up--text">
+			<h2>Dorsal solidario</h2>
+			<p>¿Te gustaría estar este día pero no puedes? ¿Quieres colaborar de alguna manera con nosotros?¡No lo dudes, <b>DONA a través del Dorsal 0</b>! 100% destinado íntegramente a la investigación científica del Cáncer Infantil!
+			</p>
+			<p>
+			¡Recuerda que está considerado una donación. No da derecho a camiseta ni dorsal para correr en el evento!</p>
+			<button><a href="#">Dorsal 0</a></button>
+		</div>
+	</div>
+	<div class="footer__down">
+		<ul>
+			<li>
+				<a href="#">Contacto</a>
+			</li>
+			<li>
+				<a href="#">Política de cookies</a>
+			</li>
+			<li>
+				<a href="#">Política de privacidad</a>
+			</li>
+		</ul>
+		<ul>
+		<li>
+			<a href="#">Facebook</a>
+		</li>
+		<li>
+			<a href="#">Twitter</a>
+		</li>
+		<li>
+			<a href="#">Youtube</a>
+		</li>
+		</ul>
+	</div>
+</footer>
 
 <?php wp_footer(); ?>
+
+<script src="<?php bloginfo('template_url'); ?>/dist/assets/js/static/swiper.min.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/dist/assets/js/custom.js"></script>
 
 </body>
 </html>
